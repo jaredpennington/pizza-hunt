@@ -13,30 +13,29 @@ const ReplySchema = new Schema(
       required: true,
       trim: true
     },
-    writtenBy: {
+    writtenBy: { 
       type: String,
       required: true,
     },
     createdAt: {
-      type: Date,
+      type: Date, 
       default: Date.now,
       get: createdAtVal => dateFormat(createdAtVal)
     }
-  },
+  }, 
   {
     toJSON: {
-      getters: true
+      getters: true 
     }
   }
 );
-
 
 const CommentSchema = new Schema(
   {
     writtenBy: {
       type: String
     },
-    commentBody: {
+    commentBody: { 
       type: String
     },
     createdAt: {
